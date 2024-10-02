@@ -3,9 +3,9 @@ plugins {
     id "io.github.goooler.shadow" version "8.1.7"
 }
 
-def id = "PaperPlugin"
-def group = 'com.example.plugin'
-def version = '1.0-SNAPSHOT'
+def id = "MCDevTools"
+def group = 'com.ericlmao.tools'
+def version = '1.0.0'
 
 repositories {
     mavenLocal()
@@ -29,11 +29,11 @@ dependencies {
     implementation("games.negative.alumina:alumina:2.9.2")
 
     // ConfigLib
-    implementation("de.exlll:configlib-yaml:4.5.0")
+    //implementation("de.exlll:configlib-yaml:4.5.0")
 
     // Lombok
-    compileOnly("org.projectlombok:lombok:1.18.32")
-    annotationProcessor("org.projectlombok:lombok:1.18.32")
+    compileOnly('org.projectlombok:lombok:1.18.34')
+    annotationProcessor('org.projectlombok:lombok:1.18.34')
 }
 
 def targetJavaVersion = 21
@@ -82,5 +82,5 @@ shadowJar {
     archiveVersion.set("")
 
     relocate "games.negative.alumina", "${group}.libs.alumina"
-    relocate "de.exlll.configlib", "${group}.libs.config"
+    //relocate "de.exlll.configlib", "${group}.libs.config"
 }

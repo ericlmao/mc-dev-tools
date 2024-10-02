@@ -1,6 +1,6 @@
-package com.example.plugin.core;
+package com.ericlmao.tools.core;
 
-import com.example.plugin.PaperPlugin;
+import com.ericlmao.tools.MCDevToolsPlugin;
 import games.negative.alumina.logger.Logs;
 import games.negative.alumina.message.Message;
 import net.kyori.adventure.audience.Audience;
@@ -17,6 +17,14 @@ import java.util.Objects;
 
 public enum Locale {
 
+    // Menu Debug Command
+    MENU_DEBUG("<dark_red><b>DEV TOOLS</b></dark_red> <dark_gray>></dark_gray> <gray>Clicked slot: <red>%slot%</red></gray>"),
+    MENU_DEBUG_ENABLED("<dark_red><b>DEV TOOLS</b></dark_red> <dark_gray>></dark_gray> <gray>Enabled menu debug.</gray>"),
+    MENU_DEBUG_DISABLED("<dark_red><b>DEV TOOLS</b></dark_red> <dark_gray>></dark_gray> <gray>Disabled menu debug.</gray>"),
+
+    // PlaySound Command
+    PLAY_SOUND("<dark_red><b>DEV TOOLS</b></dark_red> <dark_gray>></dark_gray> <gray>Playing sound <red>%sound%</red> at volume <red>%volume%</red> and pitch <red>%pitch%</red>.</gray>"),
+    PLAY_SOUND_INVALID_SOUND("<dark_red><b>DEV TOOLS</b></dark_red> <dark_gray>></dark_gray> <gray>Invalid sound '<red>%sound%</red>'!</gray>"),
     ;
 
     private final String content;
@@ -27,7 +35,7 @@ public enum Locale {
         this.message = Message.of(content);
     }
 
-    public static void init(@NotNull PaperPlugin plugin) {
+    public static void init(@NotNull MCDevToolsPlugin plugin) {
         File file = new File(plugin.getDataFolder(), "messages.yml");
         validateFile(file);
 

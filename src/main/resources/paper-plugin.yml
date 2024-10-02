@@ -1,6 +1,6 @@
-name: PaperPlugin
+name: MCDevTools
 version: '${version}'
-main: com.example.plugin.PaperPlugin
+main: com.ericlmao.tools.MCDevToolsPlugin
 api-version: '1.21'
 authors: ["ericlmao"]
 dependencies:

@@ -1,4 +1,4 @@
-package com.example.plugin.core;
+package com.ericlmao.tools.core;
 
 import org.bukkit.Bukkit;
 import org.bukkit.permissions.Permission;
@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class Perm extends Permission {
 
-    private static final String PREFIX = "plugin";
+    private static final String PREFIX = "devtools";
 
     // Add permissions here
     public static final Perm ADMIN = new Perm("admin");
